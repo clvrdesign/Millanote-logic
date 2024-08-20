@@ -35,7 +35,8 @@ route.post('/', async (req, res) => {
     try {
         const newNote = new Note({
             title: req.body.title,
-            content: req.body.content
+            content: req.body.content,
+            category: req.body.category
         });
         const savedNote = await newNote.save();
         res.status(201).json(savedNote);
