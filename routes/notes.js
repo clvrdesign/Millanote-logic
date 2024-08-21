@@ -53,7 +53,8 @@ route.patch('/:id', async (req, res) => {
             req.params.id,
             {
                 title: req.body.title,
-                content: req.body.content
+                content: req.body.content,
+                category: req.body.category
             },
             { new: true }
         );
